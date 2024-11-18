@@ -1,0 +1,25 @@
+---
+title: "AGEMARR vs MARST"
+author: "Declan Walsh, Gavin Galen, and Jawand Singh"
+date: "9/24/24"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+```
+
+```{r}
+# install libraries
+# install.packages(c("htmltools", "shiny", "DT"))
+# load ipums lib
+library(ipumsr)
+# get data
+ddi = read_ipums_ddi("ipumsi_00002.xml")
+data = read_ipums_micro(ddi)
+# look at data
+ipums_view(data)
+```
